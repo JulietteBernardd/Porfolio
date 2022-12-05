@@ -1,0 +1,222 @@
+body,
+html {
+  display: flex;
+  margin: 0%;
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.card {
+  background-color: #f2e6dd;
+  width: 300px;
+  height: 500px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  border-radius: 10px;
+}
+
+.left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.title {
+  display: flex;
+  color: azure;
+  margin-left: 30px;
+  font-size: xx-large;
+}
+
+.title:hover {
+  animation-name: title;
+  animation-duration: 0.01s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title {
+  0% {
+    background: -webkit-linear-gradient (rgb(255, 154, 107), rgb(255, 6, 6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  50% {
+    background: -webkit-linear-gradient(rgb(115, 123, 245), rgb(25, 4, 213));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    background: -webkit-linear-gradient (rgb(74, 0, 245), rgb(159, 145, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.text {
+  color: azure;
+  margin-left: 30px;
+  font-size: larger;
+}
+
+.right {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  color: azure;
+  flex-direction: row;
+  margin-left: 30px;
+  gap: 10px;
+  height: 50px;
+  width: 1000px;
+}
+
+.cv {
+  display: flex;
+  color: azure;
+  font-size: 0.9em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cv:hover {
+  background-color: blue;
+  border-color: blue;
+}
+
+.profil {
+  display: flex;
+  color: azure;
+  margin-left: 30px;
+  font-size: 0.9em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profil:hover {
+  background-color: blue;
+  border-color: blue;
+}
+
+.logo {
+  width: 5%;
+  height: 5%;
+  margin-left: 20px;
+}
+
+.contact {
+  display: flex;
+  color: gray;
+  margin-left: 30px;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  color: blue;
+}
+
+.city {
+  display: flex;
+  color: blue;
+  opacity: 75%;
+}
+
+.sujet {
+  display: flex;
+  color: blue;
+  opacity: 50%;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+  z-index: -1;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+@media (max-width: 812px) {
+  .logo {
+    display: none;
+  }
+  .left {
+    justify-content: space-between;
+    text-align: center;
+  }
+  .right {
+    max-width: 400px;
+    display: none;
+  }
+}
